@@ -1,0 +1,24 @@
+import gradio as gr
+from ultralytics import YOLO
+
+def predict_image(image, model_path='runs/detect/train/weights/best.pt'):
+    """
+    Tek bir görüntü üzerinde tahmin yapar.
+    :param image: Kullanıcı tarafından yüklenen görüntü
+    :param model_path: Eğitilen modelin yolu
+    """
+    model = YOLO(model_path)
+    results = model.predict(source=image, save=False, imgsz=640)
+    return results[0].plot()
+
+# Gradio arayüzü
+interface = gr.Interface(
+    fn=predict_image,
+    inputs=gr.Image(type="filepath"),
+    outputs=gr.Image(type="auto"),
+    title="Meyve Tespit Uygulaması",
+    description="Meyve türlerini tespit eden bir YOLOv8 modeli."
+)
+
+if __name__ == "__main__":
+    interface.launch()

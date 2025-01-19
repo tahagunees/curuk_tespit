@@ -1,0 +1,23 @@
+train: /content/drive/MyDrive/fruit-detect/dataset/train/images
+val: /content/drive/MyDrive/fruit-detect/dataset/valid/images
+test: /content/drive/MyDrive/fruit-detect/dataset/test/images
+
+nc: 3
+names: ['Bozuk Elma', 'Golden Elma', 'Scartlet Spur Elma']
+
+roboflow:
+  workspace: tahagunss
+  project: apple_detect-rxiax
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/tahagunss/apple_detect-rxiax/dataset/
+  
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,15 @@
+from ultralytics import YOLO
+
+def test_model(model_path='runs/detect/train/weights/best.pt', source='dataset/test_images'):
+    """
+    Eğitilen modeli test verileri üzerinde çalıştırır.
+    :param model_path: Eğitilen modelin yolu
+    :param source: Test görüntüleri veya videoların bulunduğu klasör
+    """
+    model = YOLO(model_path)
+    results = model.predict(source=source, save=True)
+    print("Tahminler tamamlandı! Çıktılar 'runs/detect/predict' altında.")
+    return results
+
+if __name__ == "__main__":
+    test_model()

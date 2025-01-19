@@ -1,0 +1,17 @@
+from ultralytics import YOLO
+
+def train_model(data_path='dataset/data.yaml', model_path='yolov8s.pt', epochs=10, img_size=640):
+    """
+    YOLO modeli eğitimi gerçekleştirir.
+    :param data_path: Eğitim veri seti yolu (yaml dosyası)
+    :param model_path: Kullanılacak önceden eğitilmiş model
+    :param epochs: Eğitim için epoch sayısı
+    :param img_size: Girdi görüntü boyutu
+    """
+    model = YOLO(model_path)
+    results = model.train(data=data_path, epochs=epochs, imgsz=img_size)
+    print("Eğitim tamamlandı! Sonuçlar 'runs/detect/train' altında.")
+    return results
+
+if __name__ == "__main__":
+    train_model()
