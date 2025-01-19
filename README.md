@@ -1,6 +1,6 @@
 # Fruit Detection with YOLOv8
 
-Bu proje, **YOLOv8** kullanarak meyve tespiti yapmak için geliştirilmiştir. Modelin eğitimi ve çalıştırılması için gerekli kütüphaneler **requirements.txt** dosyasında belirtilmiştir.
+Bu proje,Görüntü İşlem dersi kapsamında **YOLOv8** kullanarak elmadaki çürük tespiti yapmak için geliştirilmiştir. Modelin eğitimi ve çalıştırılması için gerekli kütüphaneler **requirements.txt** dosyasında belirtilmiştir.
 
 ## 🚀 Kurulum
 
