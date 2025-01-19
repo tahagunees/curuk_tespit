@@ -15,7 +15,7 @@ pip install -r requirements.txt
 Eğer modelin eğitimini veya testini yapmak istiyorsan, aşağıdaki komutları kullanabilirsin:
 ```bash
 # Modelin eğitimi
-python train.py --data dataset.yaml --epochs 50 --weights yolov8n.pt
+python train.py --data dataset.yaml --epochs 50(değiştirilebilir --weights yolov8n.pt
 
 # Modeli test etme
 python detect.py --source test_images/ --weights best.pt --conf 0.5
